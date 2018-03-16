@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scope Chain Demo</title>
+</head>
+<body>
+	
+
+<section class="container">
+  <h3>The Scope Chain in JavaScript</h3>
+  <a onclick="a()">Call a</a>
+  <a onclick="b()">Call b</a>
+</section>
+
+<script>
+	function b() {
+  		alert(myVar);
+	}
+
+	function a(){
+		var myVar = 2;
+		b();
+	}
+
+	var myVar = 1;
+</script>
+</body>
+</html>
